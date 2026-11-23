@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270" width="400" height="270">
+  <defs>
+    <linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3a2e"/><stop offset="1" stop-color="#c00000"/></linearGradient>
+    <linearGradient id="b1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d5bff"/><stop offset="1" stop-color="#0a1f9e"/></linearGradient>
+  </defs>
+  <rect width="400" height="270" fill="#ffffff"/>
+  <path d="M58 150 C110 78 225 34 388 12 L346 84 C336 76 322 64 318 52 C258 52 190 72 136 100 C100 118 78 136 58 150 Z" fill="url(#r1)"/>
+  <path d="M300 178 C236 218 120 226 30 190 L82 128 C108 176 168 196 300 178 Z" fill="url(#r1)"/>
+  <text x="96" y="176" font-family="Trebuchet MS, Verdana, sans-serif" font-style="italic" font-weight="900" font-size="150" fill="url(#b1)" stroke="#0a1670" stroke-width="2">epi</text>
+  <text x="258" y="252" font-family="Trebuchet MS, Verdana, sans-serif" font-style="italic" font-weight="900" font-size="64" fill="url(#r1)" stroke="#8a0000" stroke-width="1">ci</text>
+  <circle cx="311" cy="208" r="10" fill="#d40000"/>
+  <text x="350" y="40" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#555">TM</text>
+</svg>

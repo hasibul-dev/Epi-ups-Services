@@ -1,0 +1,17 @@
+export { default as ErpDashboard } from "./ErpDashboard";
+export { default as ErpAccounts } from "./ErpAccounts";
+export { default as ErpVouchers } from "./ErpVouchers";
+export { default as ErpCashBank } from "./ErpCashBank";
+export { default as ErpLedger } from "./ErpLedger";
+export { default as ErpCustomers } from "./ErpCustomers";
+export { default as ErpSuppliers } from "./ErpSuppliers";
+export { default as ErpInvoices } from "./ErpInvoices";
+export { default as ErpPurchases } from "./ErpPurchases";
+export { default as ErpPayments } from "./ErpPayments";
+export { default as ErpAgeing } from "./ErpAgeing";
+export { default as ErpInventory } from "./ErpInventory";
+export { default as ErpVat } from "./ErpVat";
+export { default as ErpPayroll } from "./ErpPayroll";
+export { default as ErpFixedAssets } from "./ErpFixedAssets";
+export { default as ErpReports } from "./ErpReports";
+export { default as ErpSettings } from "./ErpSettings";
