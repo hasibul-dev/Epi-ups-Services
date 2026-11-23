@@ -1,0 +1,84 @@
+/* Print Stylesheet for A4 Invoices, Vouchers and Reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10pt !important;
+    font-family: Arial, sans-serif !important;
+    margin: 0;
+    padding: 10mm;
+  }
+
+  .app-sidebar,
+  .app-header,
+  .table-toolbar,
+  .table-pagination,
+  .btn,
+  .no-print {
+    display: none !important;
+  }
+
+  .app-layout, .app-main, .app-body {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .print-sheet {
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .print-header {
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .print-header img {
+    height: 50px;
+    filter: none !important;
+  }
+
+  .print-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 15px 0 !important;
+  }
+
+  .print-table th, .print-table td {
+    border: 1px solid #444 !important;
+    padding: 6px 8px !important;
+    font-size: 9pt !important;
+  }
+
+  .print-table th {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+    font-weight: bold !important;
+  }
+
+  .print-signatures {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    page-break-inside: avoid;
+  }
+
+  .print-sign-box {
+    text-align: center;
+    border-top: 1px solid #000;
+    width: 160px;
+    padding-top: 5px;
+    font-size: 9pt;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPI UPS Enterprise Management System</title>
+    <meta name="description" content="EPI UPS (Bangladesh) Limited Enterprise Management Platform" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Application Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/print.css" />
+  </head>
+  <body>
+    <!-- Main Application Mounting Container -->
+    <div id="app-root"></div>
+
+    <!-- Modal Portal -->
+    <div id="app-modal" class="modal-overlay"></div>
+
+    <!-- Toast Notification Portal -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Application Scripts -->
+    <!-- 1. Config & Core Architecture -->
+    <script src="config/app.config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/api.js"></script>
+
+    <!-- 2. Reusable UI Components -->
+    <script src="components/toast.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/datatable.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/sidebar.js"></script>
+
+    <!-- 3. Pages -->
+    <script src="pages/login.js"></script>
+
+    <!-- 4. ERP Department Modules -->
+    <script src="modules/sales/sales.js"></script>
+    <script src="modules/service/service.js"></script>
+    <script src="modules/erp/erp.js"></script>
+    <script src="modules/marketing/marketing.js"></script>
+    <script src="modules/it/it.js"></script>
+    <script src="modules/admin/admin.js"></script>
+
+    <!-- 5. Client Router & Bootstrapper -->
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
