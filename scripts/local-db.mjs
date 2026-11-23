@@ -17,21 +17,26 @@ async function start() {
   const res = await db.query("SELECT count(*) as count FROM information_schema.tables WHERE table_schema = 'public';");
   const count = parseInt(res.rows[0]?.count || '0', 10);
   
-  if (count === 0) {
-    console.log('[EPI Local DB] First-time setup: applying schema from drizzle/0000_init.sql...');
-    const initSql = fs.readFileSync(path.join(rootDir, 'drizzle', '0000_init.sql'), 'utf8');
-    const stmts = initSql.split('--> statement-breakpoint');
-    for (const s of stmts) {
-      const trimmed = s.trim();
-      if (trimmed) {
-        try {
-          await db.exec(trimmed);
-        } catch (e) {
-          console.warn('[EPI Local DB] Statement notice:', e.message);
+  if (count < 30) {
+    console.log('[EPI Local DB] Applying schema migrations from drizzle/*.sql...');
+    const drizzleDir = path.join(rootDir, 'drizzle');
+    const sqlFiles = fs.readdirSync(drizzleDir).filter(f => f.endsWith('.sql')).sort();
+    for (const sqlFile of sqlFiles) {
+      console.log(`[EPI Local DB] Executing ${sqlFile}...`);
+      const initSql = fs.readFileSync(path.join(drizzleDir, sqlFile), 'utf8');
+      const stmts = initSql.split('--> statement-breakpoint');
+      for (const s of stmts) {
+        const trimmed = s.trim();
+        if (trimmed) {
+          try {
+            await db.exec(trimmed);
+          } catch (e) {
+            // Ignore if table/column already exists
+          }
         }
       }
     }
-    console.log('[EPI Local DB] Schema created successfully.');
+    console.log('[EPI Local DB] Schema migrations completed.');
   } else {
     console.log(`[EPI Local DB] Existing database detected (${count} tables).`);
   }
